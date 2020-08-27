@@ -1,0 +1,41 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 80%;
+}
+
+td, th {
+  width: 10%;
+}
+
+
+.screen-label {
+  text-align: center;
+  padding-top: 40px;
+ text-decoration: underline;
+  color:blue;
+  font: large;
+}
+
+.margin-right-50{
+  margin-right: 50px;
+  width: 30%;
+}
+
+.filter-class{
+   width: 60%;
+}
+.outer
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.inner button
+{
+    display: inline-block;
+    margin-left: 2px;
+}

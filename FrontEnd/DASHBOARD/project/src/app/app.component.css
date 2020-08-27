@@ -1,0 +1,29 @@
+.example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+    
+  }
+  mat-toolbar{
+    background-color:rgba(17, 17, 17, 0.925);
+    color: white;
+  }
+
+  mat-toolbar mat-icon{
+      color:rgb(243, 189, 11);
+  }
+
+  .nav{
+      padding-left: 100px;
+  }
+
+  .nav button{
+      margin-right: 30px;
+      border: 2px solid rgb(243, 189, 11);
+      color:rgb(243, 189, 11) ;
+  }
+
+  a:hover{
+    color:rgb(243, 189, 11) ;
+    font-size: medium;
+  }

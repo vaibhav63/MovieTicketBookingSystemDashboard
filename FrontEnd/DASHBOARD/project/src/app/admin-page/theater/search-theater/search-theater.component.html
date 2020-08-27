@@ -1,0 +1,39 @@
+<div class="theater-container">
+
+    <div class="container">
+
+            <div class="row mt-5">
+                    <div class="col-lg-9 col-sm-12 xs-12">
+                            <input type="text" placeholder="enter TheatreID" class="form-control" name="Id"
+                                    [(ngModel)]="Id">
+                    </div>
+                    <div class="col-lg-3 col-sm-12 xs-12">
+                            <button type="button" class="btn btn-info" (click)="findById()">Search</button>
+                    </div>
+            </div>
+            <h2 class="mt-5 mb-4">Results</h2>
+            <div class="row col-lg-12 col-sm-12 col xs-12">
+                    <table class="table">
+                            <thead>
+                                    <tr>
+                                            <td>Theatre ID</td>
+                                            <td>Theatre Name</td>
+                                            <td>Theatre City</td>
+                                            <td>Manager Name</td>
+                                            <td>Manager Contact</td>
+                                    </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                            <td>{{theatre.theatreID}}</td>
+                                            <td>{{theatre.theatreName}}</td>
+                                            <td>{{theatre.theatreCity}}</td>
+                                            <td>{{theatre.managerName}}</td>
+                                            <td>{{theatre.managerContact}}</td>
+                                    </tr>
+                            </tbody>
+                    </table>
+            </div>
+    </div>
+</div>
+

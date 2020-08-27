@@ -1,0 +1,67 @@
+<div class="edit-show-container">
+ 
+    <mat-toolbar color="primary">
+      <span>{{header}}</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button (click)="onClose()"><mat-icon>cancel</mat-icon></button>
+    </mat-toolbar>
+      <form [formGroup]="service.formGroupName" class="normal-form" (ngSubmit)="onSubmit()" > 
+        
+        <mat-grid-list cols="2" rowHeight="400px">
+            <mat-grid-tile >
+                <div class="controles-container" >
+                  <mat-form-field [ngClass]="{'isActive':service.tempRow != null}">
+                    
+                    <input  formControlName="showId"  matInput placeholder="SHOW ID*">
+                  </mat-form-field>
+                    
+                    <mat-form-field>
+                      <input formControlName="movieName"  matInput placeholder="Movie Title*">
+                      <mat-error>Movie Title is mandatory.</mat-error>
+                    </mat-form-field>
+                    <!-- <mat-form-field>
+                      <input formControlName="showDate" matInput placeholder="Date">
+                      <mat-error>Date is mandatory.</mat-error>
+                    </mat-form-field> -->
+
+
+                    <mat-form-field>
+                      
+                      <input matInput formControlName="showDate" placeholder="Date" [matDatepicker]="myDatePicker" >
+                      <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
+                      <mat-datepicker #myDatePicker></mat-datepicker>
+                      <mat-error>Date is mandatory.</mat-error>
+                    </mat-form-field>
+
+
+
+                    <mat-form-field>
+                      <input formControlName="startTime" matInput placeholder="Sart Time*">
+                      <mat-error >Date is mandatory.</mat-error>
+                      
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input formControlName="endTime" matInput placeholder="End Time">
+                      <mat-error>End Time is mandatory.</mat-error>
+                    </mat-form-field>
+                  </div>
+                </mat-grid-tile>
+                <mat-grid-tile >
+                  <div class="controles-container" style="padding-top:57px  ;">
+                    <mat-form-field>
+                      <input formControlName="showPoster" matInput placeholder="POSTER URL*"  #posterPath>
+                      <mat-error >URL is mandatory.</mat-error>
+                      </mat-form-field>
+                    <img [src]="posterPath.value" onerror="this.src='/assets/images/add-image.png'" style="height: 200px;width: 200px;">
+                  <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="service.formGroupName.invalid">Submit</button>
+                    <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+                  </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+            
+      </form>
+  
+  </div>
+  

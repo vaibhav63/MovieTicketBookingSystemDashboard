@@ -1,0 +1,41 @@
+<div class="add-screen-container">
+  <mat-toolbar color="accent">
+    <span>{{header}}</span>
+  </mat-toolbar>
+    <form [formGroup]="service.screenFormGroup" class="normal-form" (ngSubmit)="onSubmit()" > 
+      <mat-grid-list cols="1" rowHeight="400px">
+          <mat-grid-tile >
+              <div class="controles-container">
+                <mat-form-field  [ngClass]="{'isActive':service.tempRow != null}">
+                  <input formControlName="screenId" matInput placeholder="Screen Id*">
+                </mat-form-field>
+                  
+                  <mat-form-field>
+                    <input formControlName="screenName"  matInput placeholder="Screen Name*">
+                    <mat-error>Screen Name is mandatory.</mat-error>
+                  </mat-form-field>
+                  
+                  <mat-form-field>
+                    <input type="date" placeholder="yyyy-MM-dd" formControlName="movieEndDate" matInput placeholder="Date">
+                    <mat-error>Date is mandatory.</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input type="number" formControlName="rows"  min="1" max="15" matInput placeholder="Screen Rows*">
+                    <mat-error >Screen Rows is mandatory.</mat-error>
+                    
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input  type="number"  formControlName="columns" min="1" max="15" matInput placeholder="Screen Columns*">
+                    <mat-error>Screen Columns is mandatory.</mat-error>
+                  </mat-form-field>
+                </div>
+          </mat-grid-tile>
+      </mat-grid-list>
+           <div class="button-row">
+                  <button mat-raised-button color="warn" (click)="onClose()">Close</button>
+                  <button mat-raised-button color="primary" type="submit" [disabled]="service.screenFormGroup.invalid">Submit</button>
+                  <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+              </div>
+    </form>
+
+</div>

@@ -1,0 +1,33 @@
+<div class="theater-container">
+
+    <div class = "container mt-5 ">
+        <div class = "row col-lg-12 col-sm-12">
+            <table class = "table table-striped">
+                <thead>
+                    <tr class="bg-info text-light" >
+                        <th>Theatre ID</th>
+                        <th>Theatre Name</th>
+                        <th>Theatre City</th>
+                        <th>Manager Name</th>
+                        <th>Manager Contact</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let theatre of service.theatres">
+                        <td>{{theatre.theatreID}}</td>
+                        <td>{{theatre.theatreName}}</td>
+                        <td>{{theatre.theatreCity}}</td>
+                        <td>{{theatre.managerName}}</td>
+                        <td>{{theatre.managerContact}}</td>
+                        <td>
+                            <button class="btn btn-danger" (click)="removeTheatre(theatre)">Delete</button>
+                            <a routerLink="/adminPage/screen" class="btn btn-success active" (click)="communicationService.sendTheaterId(theatre)" role="button" routerLinkActive="active">screen</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

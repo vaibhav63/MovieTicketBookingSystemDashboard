@@ -1,0 +1,30 @@
+
+
+  <mat-toolbar  class="example-toolbar">
+    <ng-template [ngIf]="!hidden">
+      <button mat-icon-button (click)="toggleMenu()"><mat-icon>menu</mat-icon></button>
+    </ng-template>
+    
+    <h1  style="padding-left: 10px;">Show Module</h1>
+    
+    <div class="nav">
+      
+      <button mat-button  (click)="goToHome()">Home</button>
+      <button mat-button  (click)="goToDashboard()">Dashboard</button>
+    </div>
+   
+  <span class="fill-remaining-space "></span>
+  <ng-template [ngIf]="!authService. isAuthenticated()">
+   <a mat-button routerLink="/signup"   routerLinkActive="active">SignUp</a> 
+   <a mat-button routerLink="/signin"   routerLinkActive="active">SignIn</a>
+  </ng-template>
+  
+  <a mat-button *ngIf="authService. isAuthenticated()" role="button" (click)="authService.logout()"   routerLinkActive="active">SignOut</a>
+  </mat-toolbar>
+
+
+  <router-outlet></router-outlet>
+
+    
+
+  

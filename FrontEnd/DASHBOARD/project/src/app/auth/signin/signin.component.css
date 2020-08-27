@@ -1,0 +1,49 @@
+form {border: 3px solid #f1f1f1;}
+input[type=text], input[type=password] {
+  width: 100%;
+  
+ margin-left: -28px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.signInForm{
+
+  height: 50%;
+  width: 50%;
+  margin-left: 25%;
+}
+
+  input[type=submit]{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-left: -28px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  input[type=submit]:hover {
+    opacity: 0.8;
+  }
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  /* .container {
+    padding: 16px;
+  } */
+
+  
+img.avatar {
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+  }
+
+  .form-group label{
+
+    padding-left: -20px;
+  }

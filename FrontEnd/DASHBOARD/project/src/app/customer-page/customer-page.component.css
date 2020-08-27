@@ -1,0 +1,80 @@
+.customer-page{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(/assets/images/Thor.jpg);
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    
+    
+}
+.logo{
+    width: 150px;
+    margin-top: 18px;
+}
+.header{
+height: 10%;
+width: 100%;
+
+}
+
+
+
+.header-btn{
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 7px 20px;
+    float: right;
+    margin-top: 15px;
+    color: #fff !important;
+    background: #107afd;
+    font-weight: 600;
+}
+
+.movie-details{
+
+width: 90%;
+
+margin: 5% 0 0 10%;
+height: 50%;
+
+}
+
+.row{
+    width: 80%;
+    box-shadow: 8px 8px 80px  red;
+   
+    
+}
+.left-box{
+    color: #fff;
+    width: 100%;
+  
+}
+.casting img{
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.movie-img{
+    height: 350px;
+    /* box-shadow: 8px 8px 80px  rgb(223, 211, 41); */
+    box-shadow: 8px 8px 80px  black;
+    
+}
+.series h3{
+    color: #fff;
+}
+.series img{
+    width: 100%;
+    margin-top: 15px;
+box-shadow: -4px 4px 5px 0 #000;
+transition: ls;
+}
+.series img:hover{
+    transform: translateY(-10px);
+}
+.series p{
+    color: #fff;
+}

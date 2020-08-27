@@ -1,0 +1,75 @@
+<!-- <p>show-carousel-holder works!</p>
+<div>Some tags before</div> -->
+
+<div class="container">
+ 
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">SeArCh ShOw</span>
+      </div>
+      <input type="text" class="form-control" #searchValue [matDatepicker]="myDatePicker">
+      <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #myDatePicker></mat-datepicker>
+    </div>
+
+
+    <!-- <mat-form-field>
+                      
+      <input matInput formControlName="showDate" placeholder="Date" [matDatepicker]="myDatePicker" >
+      <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #myDatePicker></mat-datepicker>
+      <mat-error>Date is mandatory.</mat-error>
+    </mat-form-field> -->
+    
+    
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-success" (click)="searchByMovieName(searchValue.value)" >BY_MOVIE</button>
+      <button type="button" class="btn btn-danger" (click)="searchByDate(searchValue.value)">BY_DATE</button>
+      <button type="button" class="btn btn-warning" (click)="searchByTheaterName(searchValue.value)">BY_THEATER</button>
+    </div>
+  </div>
+    
+    
+  
+  
+    
+    <div style="margin-top: 100px;">
+       <owl-carousel-o [options]="customOptions" >
+  
+      <ng-container  *ngFor="let show of showList" >
+        <ng-template  carouselSlide [id]="show.showId">
+          <div class="show-poster">
+  
+          
+            <img  class="show-images"  [src]="show.showPoster"  >
+            
+            
+  
+            <mat-grid-list cols="5" rowHeight="100px">
+             <mat-grid-tile >
+              <mat-icon color="warn" >theaters</mat-icon> 
+             </mat-grid-tile>
+  
+             <mat-grid-tile  [colspan]="3" >
+              <div >
+                <label style="color:red;">SHOW DATE = {{show.showDate}}</label><br>
+                <label style="color: white;">MOVIE NAME = {{show.movieName}}</label>
+              </div>
+              
+            </mat-grid-tile>
+  
+            <mat-grid-tile   >
+              <mat-icon color="primary" >fastfood</mat-icon>
+            </mat-grid-tile>
+            </mat-grid-list>
+     
+           
+          </div>
+          
+        </ng-template>
+      </ng-container>
+        
+        </owl-carousel-o>
+    </div>
+   
+  

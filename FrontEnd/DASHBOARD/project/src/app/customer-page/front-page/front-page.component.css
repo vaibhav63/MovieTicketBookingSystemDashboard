@@ -1,0 +1,57 @@
+.header-image {
+    margin-top: -22px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: url('https://santai.ichotels.com.tr/wp-content/uploads/2015/05/Miniclub3.jpg') no-repeat center center scroll;
+  
+
+}
+
+.front-page{
+
+    width: 100%;
+}
+
+.container{
+
+    margin-left: 15%;
+}
+
+.headline {
+    padding: 50px 0 0 5%;
+}
+
+.headline h2 {
+    font-size: 70px;
+    letter-spacing: 2px;
+    z-index: 99999;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.5);
+    color: white;
+}
+
+.headline h3 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    z-index: 99999;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.5);
+    color: white;
+}
+
+.featurette-divider {
+    margin: 80px 0;
+}
+
+.featurette {
+    overflow: hidden;
+    
+    width: 100%;
+}
+
+.featurette-image{
+  
+    max-width: 90%;
+    margin: 20px;
+}
+
+

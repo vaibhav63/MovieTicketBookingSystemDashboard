@@ -1,0 +1,47 @@
+
+
+<div class="example-container" >
+  <mat-sidenav-container class="example-sidenav-container">
+                           
+    <mat-sidenav  mode="side"  id="sidenav" opened [class.menu-close]=communeService.menuOpen [class.menu-open]=!communeService.menuOpen >
+
+      <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Jeniffer Lawrence</mat-card-title>
+            <mat-card-subtitle>Hollywood Actress</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+                
+      <mat-nav-list>
+        
+        <a mat-list-item  [matMenuTriggerFor]="theaters"><mat-icon >location_city</mat-icon>THEATERS</a>
+        <a mat-list-item routerLink="screen"  ><mat-icon >tv</mat-icon>SCREENS</a>
+        <a mat-list-item routerLink="showManagement"  ><mat-icon >theaters</mat-icon>SHOWS</a>
+        <a mat-list-item routerLink="onGoingShow" ><mat-icon >local_activity</mat-icon>ON GOING SHOWS</a>
+ 
+        
+              <mat-menu #theaters="matMenu">
+                <a mat-menu-item routerLink="all-theatres"  ><mat-icon >location_city</mat-icon>ALL THEATERS</a>
+                <a mat-menu-item routerLink="create"  ><mat-icon >location_city</mat-icon>CREATE THEATER</a>
+                <a mat-menu-item routerLink="search"  ><mat-icon >location_city</mat-icon>SEARCH THEATER</a>
+         
+              </mat-menu>
+       
+
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content id="sidenav-content" [ngStyle]="{'margin-left.px': communeService.marginValue}">
+       
+      <div class="management-container">
+        <router-outlet></router-outlet>
+      </div>
+     
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>
+
+
+  

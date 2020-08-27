@@ -1,0 +1,83 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 4;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+
+  
+ #sidenav.menu-open {
+     width: 240px;
+ }
+
+
+ #sidenav.menu-close{
+    width: 240px;
+}
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+   
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+   
+
+  .example-card {
+    max-width: 400px;
+    
+  }
+  
+  .example-header-image {
+    background-image: url('/assets/images/jennifer.jpg');
+    background-size: cover;
+    margin-left: -10px;
+  }
+
+
+  mat-nav-list mat-icon{
+    margin-right: 15px;
+    color: rgb(243, 189, 11);
+  }
+
+  mat-nav-list a{
+    padding-top: 30px;
+    color:white;
+
+    
+    
+    
+  }
+
+  #sidenav{
+
+  background-color: #111;
+  transition: 0.5s;
+
+  
+  }
+
+
+  #sidenav-content{
+    transition: 0.5s;
+    z-index: 5;
+  }
+
+  .management-container{
+
+    margin-right: 30px;
+    background:white;
+    height: 100%;
+    padding-left: 30px;
+  }
